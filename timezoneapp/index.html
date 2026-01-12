@@ -3,29 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Quick Would You Rather</title>
+  <title>Global Time Zone Converter</title>
   <style>
+    :root{
+      --brand: #2f6fff;
+      --brand-dark: #1f4fd6;
+      --bg: #f7f9ff;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #4b5563;
+      --soft: #eef4ff;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fdfcfb;
+      background: var(--bg);
       margin: 0;
       padding: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #333;
+      color: var(--ink);
     }
+
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
-      background-color: #ff4f81;
+      padding: 2.25rem 1rem 1.25rem 1rem;
+      background: linear-gradient(135deg, var(--brand), #6aa6ff);
       color: white;
       width: 100%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
+
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 1.05rem;
+    }
+
     main {
-      background: white;
+      background: var(--card);
       border-radius: 32px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       padding: 2rem;
@@ -36,12 +59,22 @@
       flex-direction: column;
       align-items: center;
     }
+
     h2 {
       margin-top: 0;
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
-      color: #ff4f81;
+      color: var(--brand);
     }
+
+    .description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 600px;
+      color: var(--muted);
+    }
+
     .screenshots {
       display: flex;
       gap: 1.5rem;
@@ -49,6 +82,7 @@
       justify-content: center;
       margin-bottom: 2rem;
     }
+
     .screenshots img {
       width: 180px;
       height: 380px;
@@ -57,14 +91,9 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.12);
       background: #eee;
     }
-    .description {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      max-width: 600px;
-    }
+
     .support {
-      background: #fff6fa;
+      background: var(--soft);
       border-radius: 12px;
       padding: 1.5rem;
       margin-top: 2rem;
@@ -73,52 +102,61 @@
       box-shadow: 0 1px 6px rgba(0,0,0,0.06);
       text-align: center;
     }
+
     .support h3 {
       margin-top: 0;
-      color: #ff4f81;
+      color: var(--brand);
     }
+
     .support a {
-      color: #ff4f81;
+      color: var(--brand);
       text-decoration: underline;
     }
+
     .back-link {
       display: inline-block;
       margin-top: 2rem;
-      color: #ff4f81;
+      color: var(--brand);
       text-decoration: none;
       font-size: 1rem;
       transition: color 0.2s;
     }
+
     .back-link:hover {
-      color: #d63a65;
+      color: var(--brand-dark);
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Quick Would You Rather</h1>
-    <p>Jump right in and play — quick choices, big laughs, no waiting around!</p>
+    <h1>Global Time Zone Converter</h1>
+    <p>Instantly convert times across the world with clarity and precision.</p>
   </header>
+
   <main>
     <div class="description">
-      <strong>Quick Would You Rather</strong> is the fast, fun way to spark conversations 
-      and laughs in seconds. Choose between two thought-provoking, hilarious, or downright 
-      unexpected scenarios — then see who agrees and who surprises you. 
+      <strong>Global Time Zone Converter</strong> makes it easy to translate times between any
+      two time zones in seconds. Whether you're scheduling meetings, planning travel,
+      or coordinating with friends worldwide, your time differences are handled instantly
+      and accurately.
       <br><br>
-      Perfect for friends, family, or solo play. Open the app, pick a side, and the fun begins instantly! 🎉
+      Simple, fast, and built to remove all the confusion from global time conversion. 🌍⏰
     </div>
+
     <h2>App Screenshots</h2>
     <div class="screenshots">
-      <img src="assets/screenshot1.png" alt="Quick Would You Rather screenshot 1" />
-      <img src="assets/screenshot2.png" alt="Quick Would You Rather screenshot 2" />
-      <img src="assets/screenshot3.png" alt="Quick Would You Rather screenshot 3" />
+      <img src="assets/screenshot1.png" alt="Global Time Zone Converter main screen" />
+      <img src="assets/screenshot2.png" alt="Global Time Zone Converter time selection" />
+      <img src="assets/screenshot3.png" alt="Global Time Zone Converter converted results" />
       <!-- Add more screenshots as needed -->
     </div>
+
     <div class="support">
       <h3>Support & Contact</h3>
       <p><a href="privacypolicy.html" target="_blank">Privacy Policy</a></p>
     </div>
+
     <a href="../index.html" class="back-link">&larr; Back to Apps</a>
   </main>
 </body>

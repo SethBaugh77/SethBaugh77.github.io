@@ -6,17 +6,19 @@
   <title>My Apps Landing Page</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      color: #333;
-    }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-start; /* was center */
+  color: #333;
+  overflow-y: auto; /* allow vertical scrolling */
+}
+
     header {
       padding: 2rem 1rem;
       text-align: center;
@@ -35,16 +37,19 @@
       gap: 2rem;
     }
     .app-card {
-      background: white;
-      border-radius: 45px; /* Increased from 12px to 24px for more rounded corners */
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: box-shadow 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-    }
+  background: white;
+  border-radius: 45px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  min-height: 180px; /* ADD THIS */
+}
+
     .app-card.notes {
   background: none;
   box-shadow: none;
@@ -99,6 +104,12 @@
       background-position: center;
       color: white;
     }
+    .app-card.timezoneapp {
+      background-image: url('timeZoneBuddyIconEdit.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
     .app-card.randomizer .app-desc {
       color: #f0f0f0;
     }
@@ -145,6 +156,10 @@
   <div class="app-desc invisible">Check the current weather and forecast.</div>
   </a>
    <a href="wouldyourather/" class="app-card wouldyourather" aria-label="Counter App Page">
+    <div class="app-title invisible">Weather</div>
+  <div class="app-desc invisible">Check the current weather and forecast.</div>
+  </a>
+  <a href="timezoneapp/" class="app-card timezoneapp" aria-label="Counter App Page">
     <div class="app-title invisible">Weather</div>
   <div class="app-desc invisible">Check the current weather and forecast.</div>
   </a>
