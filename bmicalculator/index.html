@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMI Tracker+</title>
+  <style>
+    :root{
+      --brand: #2f6fff;
+      --brand-dark: #1f4fd6;
+      --bg: #f7f9ff;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #4b5563;
+      --soft: #eef4ff;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--ink);
+    }
+
+    header {
+      text-align: center;
+      padding: 2.25rem 1rem 1.25rem 1rem;
+      background: linear-gradient(135deg, var(--brand), #6aa6ff);
+      color: white;
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 1.05rem;
+    }
+
+    main {
+      background: var(--card);
+      border-radius: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+      max-width: 700px;
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--brand);
+    }
+
+    .description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 600px;
+      color: var(--muted);
+    }
+
+    .screenshots {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .screenshots img {
+      width: 180px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      background: #eee;
+    }
+
+    .support {
+      background: var(--soft);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .support h3 {
+      margin-top: 0;
+      color: var(--brand);
+    }
+
+    .support a {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--brand);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--brand-dark);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BMI Tracker+</h1>
+    <p>Fast, clean BMI tracking with goal BMI and target weight insights.</p>
+  </header>
+
+  <main>
+    <div class="description">
+      <strong>BMI Tracker+</strong> is a simple, modern BMI calculator designed to give you useful
+      health insights in seconds. Enter your height and weight to instantly see your BMI,
+      category, and helpful visuals that make the result easy to understand.
+      <br><br>
+      Includes a <strong>Goal BMI</strong> slider so you can see the <strong>target weight</strong> for your height,
+      plus a <strong>healthy weight range</strong> for quick reference. Supports <strong>Imperial</strong> (feet/inches or inches)
+      and <strong>Metric</strong> units.
+      <br><br>
+      No accounts. No clutter. Just the info you need. 💪📈
+    </div>
+
+    <h2>App Screenshots</h2>
+    <div class="screenshots">
+      <img src="assets/screenshot1.png" alt="BMI Tracker+ main screen" />
+      <img src="assets/screenshot2.png" alt="BMI Tracker+ goal BMI and target weight" />
+      <img src="assets/screenshot3.png" alt="BMI Tracker+ results and healthy range" />
+      <!-- Add more screenshots as needed -->
+    </div>
+
+    <div class="support">
+      <h3>Support & Contact</h3>
+      <p><a href="privacypolicy.html" target="_blank">Privacy Policy</a></p>
+    </div>
+
+    <a href="../index.html" class="back-link">&larr; Back to Apps</a>
+  </main>
+</body>
+</html>
