@@ -6,18 +6,18 @@
   <title>My Apps Landing Page</title>
   <style>
     body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f4f8;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: flex-start; /* was center */
-  color: #333;
-  overflow-y: auto; /* allow vertical scrolling */
-}
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: flex-start;
+      color: #333;
+      overflow-y: auto;
+    }
 
     header {
       padding: 2rem 1rem;
@@ -27,6 +27,7 @@
       width: 100%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     main {
       flex: 1;
       width: 100%;
@@ -36,146 +37,178 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
     }
-    .app-card {
-  background: white;
-  border-radius: 45px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
 
-  min-height: 195px; /* ADD THIS */
-}
+    .app-card {
+      background: white;
+      border-radius: 45px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      min-height: 195px;
+    }
 
     .app-card.notes {
-  background: none;
-  box-shadow: none;
-  cursor: default;
-}
+      background: none;
+      box-shadow: none;
+      cursor: default;
+    }
+
     .app-card:hover {
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
+
     .app-title {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
+
     .app-desc {
       font-size: 1rem;
       color: #555;
     }
-    /* Add background image for Randomizer card */
+
+    /* App background images */
+
     .app-card.randomizer {
       background-image: url('shuffler.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.cetl {
       background-image: url('cetl.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.ar {
       background-image: url('ARIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.counter {
       background-image: url('tapAppIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.bmicalculator {
       background-image: url('bmiTrackerImage.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.taprace {
       background-image: url('tapRaceIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.wouldyourather {
       background-image: url('wouldYouRather.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.timezoneapp {
       background-image: url('globalTimeZoneConverter.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.dategapcalculator {
       background-image: url('dateGapCalculatorIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.fuelcostestimator {
       background-image: url('fuelCostEstimatorIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.subscriptioncosttracker {
       background-image: url('subscriptionCostTrackerIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.currencyshift {
       background-image: url('currencyShiftIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.wordnado {
       background-image: url('wordnadoIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.tubetangle {
       background-image: url('tubeTangleIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.griddoku {
       background-image: url('griddokuIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.pegdrop {
       background-image: url('pegDropIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .app-card.dicerollpro3d {
       background-image: url('diceRollPro3DIcon.png');
       background-size: cover;
       background-position: center;
       color: white;
     }
-.app-card.randomizer .app-desc {
+
+    /* Our DVD Tracker */
+    .app-card.ourdvdtracker {
+      background-image: url('ourDvdTrackerIcon.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .app-card.randomizer .app-desc {
       color: #f0f0f0;
     }
+
     .app-card .invisible {
-  visibility: hidden;
-}
+      visibility: hidden;
+    }
+
     footer {
       padding: 1rem;
       text-align: center;
@@ -192,6 +225,7 @@
 </header>
 
 <main>
+
   <a href="randomizer/index.html" class="app-card randomizer" aria-label="Randomizer App Page">
     <div class="app-title"></div>
     <div class="app-desc"></div>
@@ -203,67 +237,91 @@
   </a>
 
   <a href="http://arlst.com" class="app-card ar" aria-label="Weather App Page">
-  <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
-</a>
+    <div class="app-title invisible">Weather</div>
+    <div class="app-desc invisible">Check the current weather and forecast.</div>
+  </a>
 
   <a href="counter/index.html" class="app-card counter" aria-label="Counter App Page">
     <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+    <div class="app-desc invisible">Check the current weather and forecast.</div>
   </a>
-   <a href="taprace/index.html" class="app-card taprace" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="taprace/index.html" class="app-card taprace" aria-label="Tap Race App Page">
+    <div class="app-title invisible">Tap Race</div>
+    <div class="app-desc invisible">Test your tapping speed.</div>
   </a>
-   <a href="wouldyourather/index.html" class="app-card wouldyourather" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="wouldyourather/index.html" class="app-card wouldyourather" aria-label="Would You Rather App Page">
+    <div class="app-title invisible">Would You Rather</div>
+    <div class="app-desc invisible">Play Would You Rather.</div>
   </a>
-  <a href="timezoneapp/index.html" class="app-card timezoneapp" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="timezoneapp/index.html" class="app-card timezoneapp" aria-label="Global Time Zone Converter App Page">
+    <div class="app-title invisible">Time Zone Converter</div>
+    <div class="app-desc invisible">Convert time zones.</div>
   </a>
-  <a href="bmicalculator/index.html" class="app-card bmicalculator" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="bmicalculator/index.html" class="app-card bmicalculator" aria-label="BMI Tracker App Page">
+    <div class="app-title invisible">BMI Tracker</div>
+    <div class="app-desc invisible">Track your BMI.</div>
   </a>
-  <a href="dategapcalculator/index.html" class="app-card dategapcalculator" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="dategapcalculator/index.html" class="app-card dategapcalculator" aria-label="Date Gap Calculator App Page">
+    <div class="app-title invisible">Date Gap Calculator</div>
+    <div class="app-desc invisible">Calculate the time between dates.</div>
   </a>
-  <a href="fuelcostestimator/index.html" class="app-card fuelcostestimator" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="fuelcostestimator/index.html" class="app-card fuelcostestimator" aria-label="Fuel Cost Estimator App Page">
+    <div class="app-title invisible">Fuel Cost Estimator</div>
+    <div class="app-desc invisible">Estimate fuel costs.</div>
   </a>
-  <a href="subscriptioncosttracker/index.html" class="app-card subscriptioncosttracker" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="subscriptioncosttracker/index.html" class="app-card subscriptioncosttracker" aria-label="Subscription Cost Tracker App Page">
+    <div class="app-title invisible">Subscription Cost Tracker</div>
+    <div class="app-desc invisible">Track subscription expenses.</div>
   </a>
-  <a href="currencyshift/index.html" class="app-card currencyshift" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="currencyshift/index.html" class="app-card currencyshift" aria-label="Currency Shift App Page">
+    <div class="app-title invisible">Currency Shift</div>
+    <div class="app-desc invisible">Convert currencies.</div>
   </a>
-  <a href="wordnado/index.html" class="app-card wordnado" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="wordnado/index.html" class="app-card wordnado" aria-label="Wordnado App Page">
+    <div class="app-title invisible">Wordnado</div>
+    <div class="app-desc invisible">Play word games.</div>
   </a>
-  <a href="tubetangle/index.html" class="app-card tubetangle" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="tubetangle/index.html" class="app-card tubetangle" aria-label="Tube Tangle App Page">
+    <div class="app-title invisible">Tube Tangle</div>
+    <div class="app-desc invisible">Untangle the tubes.</div>
   </a>
-  <a href="griddoku/index.html" class="app-card griddoku" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="griddoku/index.html" class="app-card griddoku" aria-label="Griddoku App Page">
+    <div class="app-title invisible">Griddoku</div>
+    <div class="app-desc invisible">Play Griddoku.</div>
   </a>
-  <a href="pegdrop/index.html" class="app-card pegdrop" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="pegdrop/index.html" class="app-card pegdrop" aria-label="Peg Drop App Page">
+    <div class="app-title invisible">Peg Drop</div>
+    <div class="app-desc invisible">Drop balls through pegs.</div>
   </a>
-  <a href="dicerollpro3d/index.html" class="app-card dicerollpro3d" aria-label="Counter App Page">
-    <div class="app-title invisible">Weather</div>
-  <div class="app-desc invisible">Check the current weather and forecast.</div>
+
+  <a href="dicerollpro3d/index.html" class="app-card dicerollpro3d" aria-label="Dice Roll Pro 3D App Page">
+    <div class="app-title invisible">Dice Roll Pro 3D</div>
+    <div class="app-desc invisible">Roll realistic 3D dice.</div>
   </a>
+
+  <!-- Our DVD Tracker -->
+  <a href="ourdvdtracker/index.html" class="app-card ourdvdtracker" aria-label="Our DVD Tracker App Page">
+    <div class="app-title invisible">Our DVD Tracker</div>
+    <div class="app-desc invisible">Keep your DVD collection organized and track the movies you own.</div>
+  </a>
+
 </main>
 
 <footer>
   &copy; 2025 Seth Baugh. All rights reserved.
+</footer>
+
+</body>
+</html>
